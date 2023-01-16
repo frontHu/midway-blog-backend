@@ -20,4 +20,10 @@ export class TestController {
     const query = this.ctx.query;
     return this.articleService.articleListService(query);
   }
+
+  @Get('/detail')
+  async articleGetDetailController() {
+    const query = this.ctx.query;
+    return this.articleService.articleGetDetail(query);
+  }
 }

@@ -29,4 +29,14 @@ export class ArticleService {
     });
     return result;
   }
+
+  // article get detail
+  async articleGetDetail(query) {
+    const result = await this.articleModel.findOne({
+      where: {
+        id: query.id,
+      },
+    });
+    return result;
+  }
 }
